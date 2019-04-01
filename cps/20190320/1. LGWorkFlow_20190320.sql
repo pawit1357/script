@@ -1,0 +1,1 @@
+ALTER TABLE [LGWorkFlow] add  DateTeamAcpt datetime NULL;

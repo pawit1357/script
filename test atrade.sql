@@ -1,0 +1,15 @@
+select 
+LAR_BASE_AMT,
+CCY_CD,
+LAR_BAL_BASE_AMT,
+FLAG_SELL_BUY,
+SELL_BUY_CCY_CD,*
+
+FROM [ATD].[dbo].[ATD_LAR_TR] where  LAR_REFR_NO like 'yo178F02';
+
+
+select PAYMENT_DATE,* from ATD_INT_SCHEDULE_PLAN where LAR_NO='TMB1TR18/039';
+
+
+
+update [ATD].[dbo].[ATD_LAR_TR] set STATUS_CD=1 where LAR_NO='TMB1TR18/039';

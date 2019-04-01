@@ -1,0 +1,1 @@
+--ALTER TABLE [dbo].[TxnReqLG] ADD createBy nvarchar(6);

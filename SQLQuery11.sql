@@ -1,0 +1,3 @@
+SELECT ROW_NUMBER() OVER(ORDER BY RLG.ReqID ASC) AS SEQ,RLG.ReqID,O.ObjectiveName,RLG.ReqDate,RLG.PartyName,RLG.UserCode,RLG.CreateBy,RLG.EcuStatus,RLG.OCCode,RLG.ReqStatus,(case    when RLG.ReqStatus = '1' then 'In process'    when RLG.ReqStatus = '2' then 'Waiting Approve'    when RLG.ReqStatus = '3' then 'Waiting Ecu'    when RLG.ReqStatus = '4' then 'Rejected to Maker'    when RLG.ReqStatus = '5' then 'Rejected'    when RLG.ReqStatus = '6' then 'Approved'    when RLG.ReqStatus = '7' then 'Cancel'end) ReqStatusText  
+FROM TxnReqLG RLG LEFT JOIN Ref_Objective O ON RLG.ObjectiveID = O.ObjectiveID 
+--WHERE RLG.ReqStatus = '1' AND RLG.OCCode = '0620'
