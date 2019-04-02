@@ -1,3 +1,4 @@
+# -- script (1)
 CREATE TABLE `template_seagate_gcms_coverpage_2` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `component_id` int(11) DEFAULT NULL,
@@ -177,3 +178,28 @@ CREATE TABLE `template_seagate_gcms_coverpage_2` (
   PRIMARY KEY (`ID`),
   KEY `fk_sample_idx_81_idx` (`sample_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14893 DEFAULT CHARSET=utf8;
+
+# -- script (2)
+ALTER TABLE `template_seagate_gcms_coverpage`
+  add column `E13` varchar(20) DEFAULT NULL,
+  add column `E14` varchar(20) DEFAULT NULL,
+  add column `E15` varchar(20) DEFAULT NULL,
+  add column `E16` varchar(20) DEFAULT NULL,
+  add column `E17` varchar(20) DEFAULT NULL,
+  add column `E18` varchar(20) DEFAULT NULL,
+  add column `E19` varchar(20) DEFAULT NULL,
+  add column `F13` varchar(20) DEFAULT NULL,
+  add column `F14` varchar(20) DEFAULT NULL,
+  add column `F15` varchar(20) DEFAULT NULL,
+  add column `F16` varchar(20) DEFAULT NULL,
+  add column `F17` varchar(20) DEFAULT NULL,
+  add column `F18` varchar(20) DEFAULT NULL,
+  add column `F19` varchar(20) DEFAULT NULL;
+  
+  
+  
+  # -- script (3)
+  
+
+ALTER TABLE `alsi`.`tb_m_component` 
+CHANGE COLUMN `A` `A` VARCHAR(500) NULL DEFAULT NULL ;
