@@ -9,16 +9,12 @@ where x.ID = js.ID)
 from job_sample js
 left join m_status ms on ms.ID = js.job_status
 where js.template_id in (
-select id from m_template where status='A' and path_url like '%WD_IC%')
+select id from m_template where status='A' and path_url like '%Seagate_GCMS_3%')
 order by js.job_number desc;
 
-select * from m_template where  path_url like '%Seagate_GCMS_3%';
-
-select * from m_template where status='A' and path_url like '%WD_IC%';
-select * from m_template where id=537;
-
--- ELP-3526-IB
--- ELP-3527-G
 
 
--- ELP-3309-IB/than
+
+-- select * from m_template where  path_url like '%Seagate_GCMS_3%';
+-- select * from m_template where status='A' and path_url like '%WD_IC%';
+-- select * from m_template where id=537;

@@ -29,3 +29,7 @@ FROM            dbo.NotifyJob INNER JOIN
 
 -- 4. cpoNotification:token
 insert On_Config(config_name,config_value,description,config_type_id) values('cpoNotification','AOjxwKSL0I','token',3);
+
+-- 5. เพิ่ม length ของ filed device_token ใน On_User_Access
+ALTER TABLE On_User_Access ALTER COLUMN device_token varchar(400);
+ALTER TABLE NotifyReceiver ALTER COLUMN device_token varchar(400);

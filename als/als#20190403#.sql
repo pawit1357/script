@@ -1,7 +1,9 @@
 select 
+job_number,
 sample_invoice,
 sample_invoice_date,
 sample_invoice_complete_date,
+-- xxxxxxx
 date_login_inprogress,
 date_login_complete,
 date_chemist_analyze,
@@ -16,8 +18,6 @@ date_admin_sent_to_cus,
 date_admin_pdf_inprogress,
 date_admin_pdf_complete
 from job_sample 
--- where sample_invoice='INV001';
+where job_number = 'ELP-1460-G'
+and sample_invoice = 'IV1809128'
 order by ID desc
--- sample_invoice_date is not null and sample_invoice_complete_date is not null -- 
-
-
