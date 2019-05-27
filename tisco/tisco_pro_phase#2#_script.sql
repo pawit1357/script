@@ -1,9 +1,12 @@
+
 --1) Add Job
 -- 1.1)
 INSERT INTO [AG_Command_Key](command_key,command_value) VALUES ('DelIncCase','DelIncCase');
+
 -- 1.2)
 INSERT [dbo].[AG_Commands] ([command_uid], [command_key], [value1], [value2], [value3], [value4], [value5], [return_key], [created_date], [timeout], [priority], [state], [done_date], [return_msg], [last_update], [start_date], [repeat]) 
 VALUES (N'5f242653-05bd-47ea-8134-d9d0e70b8dd5', N'DelIncCase', NULL, NULL, NULL, NULL, N'success : 2019-02-28 16:29:05', NULL, N'2015-03-23 12:17:45', 0, 3, 1, GETDATE(), N'success', NULL, GETDATE(), 1440);
+
 -- 1.3)
 insert On_Config(config_name,config_value,description,config_type_id) values('DelIncCaseDay','0','Day to Delete Case Incomplete',3);
 
@@ -72,11 +75,17 @@ GO
 	ALTER TABLE TC_Customer add driver varchar(2);
 	ALTER TABLE TC_Customer add companyName varchar(300);
 	ALTER TABLE TC_Customer add incomeMethod varchar(2);
+
 -- 2.5)
 	ALTER TABLE TC_Case add CashSupportTotal decimal(11, 2);
 	ALTER TABLE TC_Case add DiscountTotal decimal(11, 2);
 	ALTER TABLE TC_Case add AddOnTotal decimal(11, 2);
 	ALTER TABLE TC_Case add TCGCreditLimit decimal(11, 2);
+
+	ALTER TABLE TC_Case2 add CashSupportTotal decimal(11, 2);
+	ALTER TABLE TC_Case2 add DiscountTotal decimal(11, 2);
+	ALTER TABLE TC_Case2 add AddOnTotal decimal(11, 2);
+	ALTER TABLE TC_Case2 add TCGCreditLimit decimal(11, 2);
 
 
 
