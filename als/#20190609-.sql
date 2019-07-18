@@ -1,0 +1,1 @@
+INSERT INTO `alsi`.`menu` (`MENU_ID`, `MENU_NAME`, `URL_NAVIGATE`, `MENU_TAG`, `PREVIOUS_MENU_ID`, `DISPLAY_ORDER`, `UPDATE_BY`, `CREATE_DATE`, `UPDATE_DATE`) VALUES ('20', 'SO Code', '/alis/view/soCode/SearchSoCode.aspx', 'SearchSoCode|', '3', '10', 'SYSTEM', '2015-02-13', '2015-02-13');
