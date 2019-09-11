@@ -1,0 +1,1 @@
+update On_User_Access set expire_date='2019-09-05 23:59:59',user_token='2a032187f5ba49e7895ac782da442f56' where user_name='DEVSACADS5';
