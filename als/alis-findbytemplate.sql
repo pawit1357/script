@@ -10,8 +10,8 @@ where x.ID = js.ID)
 from job_sample js
 left join m_status ms on ms.ID = js.job_status
 where js.template_id in (
-select id from m_template where status='A' and path_url like '%WD_FTIR_IDM%')
+select id from m_template where status='A' and path_url like '%TemplateEln%')
 order by js.job_number desc
- ) x -- where template_id=1165
--- ELP-4192-G
+ ) x where job_number='ELN-1597-DB'
+-- ELN-1597-DB
 
